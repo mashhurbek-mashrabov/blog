@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Log out{% endblock title %}
+
+{% block content %}
+<h2>Log out</h2>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+  <button href="{% url 'home' %}" class="btn btn-outline-primary">Home</button>
+  <button type="submit" class="btn btn-outline-primary">Log out</button>
+</form>
+{% endblock content %}
